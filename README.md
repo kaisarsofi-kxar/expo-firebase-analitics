@@ -1,50 +1,120 @@
-# Welcome to your Expo app 👋
+# Firebase Analytics Demo App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native application built with Expo that demonstrates the implementation and usage of Firebase Analytics in a mobile application.
 
-## Get started
+## Overview
 
-1. Install dependencies
+This project showcases how to:
+- Set up Firebase Analytics in a React Native application
+- Track user events and interactions
+- Generate analytics data for reporting
 
+## Technologies Used
+
+- React Native
+- Expo
+- Firebase Analytics
+- TypeScript
+- React Navigation
+
+## Prerequisites
+
+- Node.js (14.x or newer)
+- npm or yarn
+- Expo CLI
+- iOS Simulator or Android Emulator for local testing
+- Firebase account
+
+## Installation
+
+1. Clone the repository:
    ```bash
+   git clone https://github.com/yourusername/firebase-analitics.git
+   cd firebase-analitics
+   ```
+
+2. Install dependencies:
+   ```bash
+   yarn install
+   # or
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server:
    ```bash
-    npx expo start
+   yarn start
+   # or 
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+## Firebase Setup
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+This project already includes the necessary Firebase configuration files:
+- `firebase-data/google-services.json` (for Android)
+- `firebase-data/GoogleService-Info.plist` (for iOS)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+If you want to use your own Firebase project:
 
-## Get a fresh project
+1. Create a new project in the [Firebase Console](https://console.firebase.google.com/)
+2. Set up Firebase for your Android and iOS apps
+3. Download the configuration files and replace the existing ones
 
-When you're ready, run:
+## Running the App
+
+### Development Mode
 
 ```bash
-npm run reset-project
+# Start the Expo development server
+yarn start
+# or
+npm start
+
+# Run on iOS
+yarn ios
+# or
+npm run ios
+
+# Run on Android
+yarn android
+# or
+npm run android
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Production Build
 
-## Learn more
+For detailed instructions on creating production builds, refer to the [Expo documentation](https://docs.expo.dev/deploy/build-project/).
 
-To learn more about developing your project with Expo, look at the following resources:
+## Testing Analytics Events
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+The app includes a demo button in the home screen that logs a custom event to Firebase Analytics when pressed. You can view these events in your Firebase Console under Analytics.
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+firebase-analitics/
+├── firebase-data/        # Firebase configuration files
+├── src/
+│   ├── app/              # Main application screens
+│   ├── assets/           # Images, fonts, and other static assets
+│   ├── components/       # Reusable UI components
+│   ├── constants/        # App constants and configuration
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utility functions and helpers
+│   ├── routes/           # Navigation configuration
+│   └── scripts/          # Build and setup scripts
+├── app.json              # Expo configuration
+├── package.json          # Dependencies and scripts
+└── tsconfig.json         # TypeScript configuration
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+
+[MIT License](LICENSE)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Contact
+
+For questions or support, please open an issue in the repository.
